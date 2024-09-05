@@ -1,2 +1,0 @@
-# reCAPTCHA
-Google reCAPTCHA
