@@ -1,0 +1,153 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+.captcha-container {
+    width: 340px; /* Static width like Google reCAPTCHA */
+    padding: 16px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    border: 1px solid #d3d3d3;
+    background-color: white;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.captcha-instruction p {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.captcha-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.captcha-image {
+    position: relative;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.2s;
+    width: 100px;
+    height: 100px;
+}
+
+.captcha-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.captcha-image.selected {
+    border: 2px solid #4A90E2;
+}
+
+.captcha-image.selected::after {
+    content: '✔';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #4A90E2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #FFF;
+}
+
+.subscribe-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.subscribe-section input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.subscribe-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.subscribe-section button:hover {
+    background-color: #0056b3;
+}
+
+.info-wrapper {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.info-text-wrapper p {
+    margin: 10px 0;
+}
+
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-top: auto; 
+}
+
+.navigation-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-menu-item {
+    display: inline;
+    margin: 0 10px;
+}
+
+.navigation-menu-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.navigation-menu-item a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 10px;
+}
